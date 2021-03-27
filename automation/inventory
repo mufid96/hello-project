@@ -1,0 +1,5 @@
+[main]
+local ansible_host=10.0.0.150 ansible_user=main
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
