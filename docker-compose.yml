@@ -3,9 +3,6 @@ services:
 
   #Java Service
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
     image: hello-java
     ports:
       - "8888:8888"
