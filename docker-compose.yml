@@ -12,15 +12,3 @@ services:
     container_name: app
     restart: unless-stopped
     tty: true
-
-  #Nginx Service
-  webserver:
-    image: nginx:alpine
-    container_name: nginxapp
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx/:/etc/nginx/conf.d/
