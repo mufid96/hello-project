@@ -1,0 +1,38 @@
+version: '3'
+services:
+
+  #Java Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hello-java
+    ports:
+      - "8888:8888"
+    container_name: app
+    restart: unless-stopped
+    tty: true
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: nginxapp
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+
+  #Jenkins Service
+  cicd:
+    image: jenkins/jenkins:lts
+    container_name: cicdapp
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins-data:/var/jenkins_home
