@@ -33,7 +33,7 @@ public class MainVerticle extends AbstractVerticle {
   }
 
   private void index(RoutingContext context) {
-    log.info("index request: " + context.request().headers().toString().replace("\n", " "));
+    log.info("index request: " + context.request().headers().toString().replace("\n", " "))
 
     JsonObject response = new JsonObject()
       .put("status", 200)
