@@ -9,11 +9,3 @@ services:
     container_name: test-app
     restart: unless-stopped
     tty: true
-
-  main-app:
-    image: hello-java-main
-    ports:
-      - "8900:8900"
-    container_name: main-app
-    restart: unless-stopped
-    tty: true
