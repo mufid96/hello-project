@@ -20,7 +20,7 @@ public class MainVerticle extends AbstractVerticle {
     Router router = Router.router(vertx);
     router.get("/").handler(this::index);
 
-    int serverPort = Integer.parseInt(Optional.ofNullable(System.getenv("SERVER_PORT")).orElse("8888"));
+    int serverPort = Integer.parseInt(Optional.ofNullable(System.getenv("SERVER_PORT")).orElse("8900"));
     server.requestHandler(router).listen(serverPort, ar -> {
       if (ar.succeeded()) {
         log.info("HTTP server running on port " + serverPort);
