@@ -2,10 +2,10 @@ version: '3'
 services:
 
   #Java Service
-  main-app:
-    image: hello-java-main
+  app:
+    image: hello-java
     ports:
-      - "8900:8900"
-    container_name: main-app
+      - "8888:8888"
+    container_name: hello-app
     restart: unless-stopped
     tty: true
