@@ -2,10 +2,10 @@ version: '3'
 services:
 
   #Java Service
-  app:
-    image: hello-java
+  test-app:
+    image: hello-java-test
     ports:
-      - "8888:8888"
-    container_name: app
+      - "8900:8900"
+    container_name: test-app
     restart: unless-stopped
     tty: true

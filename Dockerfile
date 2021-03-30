@@ -36,5 +36,5 @@ ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 RUN mvn clean compile vertx:package
-EXPOSE 8888
+EXPOSE 8900
 CMD java -jar target/*.jar
