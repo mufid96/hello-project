@@ -40,6 +40,6 @@ public class MainVerticle extends AbstractVerticle {
       .put("messages", "Hello from ALAMI (v1.0) this is form main branch");
 
     context.response().putHeader("Content-Type", "application/json");
-    context.response().end(response.encodePrettily());
+    context.response().end(response.encodePrettily())
   }
 }
