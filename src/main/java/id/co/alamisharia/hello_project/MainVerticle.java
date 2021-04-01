@@ -37,7 +37,7 @@ public class MainVerticle extends AbstractVerticle {
 
     JsonObject response = new JsonObject()
       .put("status", 200)
-      .put("messages", "Hello from ALAMI (v1.1) this is from test branch");
+      .put("messages", "Hello from ALAMI (v1.2) this is from test branch");
 
     context.response().putHeader("Content-Type", "application/json");
     context.response().end(response.encodePrettily());
